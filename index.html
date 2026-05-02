@@ -11,8 +11,6 @@
     <title>Portfolio website</title>
 </head>
 <script>
-    const header = document.querySelector(".l-header");
-  
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 50) {
         header.classList.add("scroll-header");
@@ -56,7 +54,7 @@
                     <h1 class="home__title">
                         Salut,<br>
                         Moi c’est <span class="home__title-color">Radouani Wiam</span><br>
-                        <span id="typing-text"></span><span class="cursor">|</span>
+                        <span id="typing-text"></span><span class="cursor"></span>
                         </h1>
             
                     <a href="assets/cv_wiam.pdf" class="button" download>
@@ -70,16 +68,11 @@
                 </div>
 
                 <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
+                  <div class="img-wrapper">
+                      <img src="assets/img/wiam.png" alt="profil">
+                  </div>
+              </div>
+            
             </section>
 
             <!--===== ABOUT =====-->
@@ -90,7 +83,7 @@
 <div class="about__container bd-grid">
     
     <div class="about__img">
-        <img src="assets/img/about.jpg" alt="">
+        <img src="assets/img/wiam.jpeg" alt="">
     </div>
 
     <div>
@@ -115,61 +108,50 @@
     </div>                                   
 </div>
             <!--===== SKILLS =====-->
+          
             <section class="skills section" id="skills">
-                <h2 class="section-title">Compétences thechniques </h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle"></h2>
-                        <p class="skills__text">Je conçois et développe des applications web modernes en frontend et backend, en privilégiant la performance, l’ergonomie et l’expérience utilisateur.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                        
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">Python</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
+              <h2 class="section-title">Compétences techniques</h2>
+          
+              <div class="skills-grid">
+          
+                  <div class="skill-card">
+                      <i class='bx bxl-html5'></i>
+                      <h3>Frontend</h3>
+                      <p>HTML / CSS / JS / React</p>
+                  </div>
+          
+                  <div class="skill-card">
+                      <i class='bx bxl-nodejs'></i>
+                      <h3>Backend</h3>
+                      <p>Node.js / Express / PHP</p>
+                  </div>
+          
+                  <div class="skill-card">
+                      <i class='bx bx-data'></i>
+                      <h3>Base de données</h3>
+                      <p>MySQL / SQL</p>
+                  </div>
+          
+                  <div class="skill-card">
+                      <i class='bx bx-network-chart'></i>
+                      <h3>Conception</h3>
+                      <p>UML / MCD / MLD</p>
+                  </div>
+          
+                  <div class="skill-card">
+                      <i class='bx bxl-python'></i>
+                      <h3>Langages</h3>
+                      <p>Python / JavaScript</p>
+                  </div>
+          
+                  <div class="skill-card">
+                      <i class='bx bxl-github'></i>
+                      <h3>Outils</h3>
+                      <p>Git / GitHub / VS Code</p>
+                  </div>
+          
+              </div>
+          </section>
             <!--===== WORK =====-->
             <section class="work section" id="work">
                 <h2 class="section-title">Projets</h2>
@@ -227,7 +209,7 @@
               
                 <div class="contact__bubbles">
               
-                  <a href="https://linkedin.com/in/TON-LINK" target="_blank" class="bubble">
+                  <a href="https://www.linkedin.com/in/wiam-radouani-19ab0b2a3/" target="_blank" rel="noopener noreferrer" class="bubble">
                     <i class='bx bxl-linkedin'></i>
                   </a>
               
@@ -304,3 +286,16 @@ tsParticles.load("tsparticles", {
     </script>
     </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector(".l-header");
+  
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 50) {
+        header.classList.add("scroll-header");
+      } else {
+        header.classList.remove("scroll-header");
+      }
+    });
+  });
+  </script>
