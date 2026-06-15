@@ -957,3 +957,104 @@ p {
   box-shadow: 0 15px 40px rgba(138,125,255,0.25);
   border-color: rgba(138,125,255,0.5);
 }
+.experience__container {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* CARTE STYLE SPATIAL / GLASS */
+.experience__card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 18px;
+
+  /* effet verre violet */
+  background: rgba(108, 99, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(108, 99, 255, 0.25);
+
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.15);
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* ligne lumineuse spatiale */
+.experience__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #6C63FF,
+    #9B8CFF,
+    #6C63FF
+  );
+  box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+}
+
+/* glow hover futuriste */
+.experience__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(108, 99, 255, 0.35);
+  border: 1px solid rgba(155, 140, 255, 0.5);
+}
+
+/* TITRE */
+.experience__card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+/* ENTREPRISE + DATE */
+.experience__company {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+/* LISTE */
+.experience__card ul {
+  padding-left: 1.2rem;
+}
+
+.experience__card ul li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* puce violette */
+.experience__card ul li::marker {
+  color: #9B8CFF;
+}
+
+/* petit effet glow interne */
+.experience__card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(155, 140, 255, 0.08),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.experience__card:hover::after {
+  opacity: 1;
+}
